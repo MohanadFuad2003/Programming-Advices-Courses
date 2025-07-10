@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\Problem34\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A513682-B0E7-4158-A6BC-2D92D334F93A}|Problem34.vcxproj|C:\\Users\\User\\source\\repos\\Problem34\\Problem34.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A513682-B0E7-4158-A6BC-2D92D334F93A}|Problem34.vcxproj|solutionrelative:Problem34.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Problem34.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Problem34\\Problem34.cpp",
+              "RelativeDocumentMoniker": "Problem34.cpp",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Problem34\\Problem34.cpp",
+              "RelativeToolTip": "Problem34.cpp",
+              "ViewState": "AQIAABoAAAAAAAAAAAAYwC0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-07T16:29:01.509Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

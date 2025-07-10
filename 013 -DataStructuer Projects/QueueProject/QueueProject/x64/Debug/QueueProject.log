@@ -1,0 +1,5 @@
+﻿  QueueProject.cpp
+C:\Users\User\source\repos\QueueProject\clsQueueLine.h(108,30): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'QueueProject.cpp')
+  
+  QueueProject.vcxproj -> C:\Users\User\source\repos\QueueProject\x64\Debug\QueueProject.exe

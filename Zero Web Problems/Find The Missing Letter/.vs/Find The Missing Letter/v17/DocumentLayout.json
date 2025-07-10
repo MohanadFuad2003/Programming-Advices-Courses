@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mohan\\source\\repos\\Find The Missing Letter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F0B6F87-6C4E-445A-9709-70288E8FC37F}|Find The Missing Letter\\Find The Missing Letter.vcxproj|C:\\Users\\mohan\\source\\repos\\Find The Missing Letter\\Find The Missing Letter\\Find The Missing Letter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F0B6F87-6C4E-445A-9709-70288E8FC37F}|Find The Missing Letter\\Find The Missing Letter.vcxproj|solutionrelative:Find The Missing Letter\\Find The Missing Letter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Find The Missing Letter.cpp",
+              "DocumentMoniker": "C:\\Users\\mohan\\source\\repos\\Find The Missing Letter\\Find The Missing Letter\\Find The Missing Letter.cpp",
+              "RelativeDocumentMoniker": "Find The Missing Letter\\Find The Missing Letter.cpp",
+              "ToolTip": "C:\\Users\\mohan\\source\\repos\\Find The Missing Letter\\Find The Missing Letter\\Find The Missing Letter.cpp",
+              "RelativeToolTip": "Find The Missing Letter\\Find The Missing Letter.cpp",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-03T15:48:04.082Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

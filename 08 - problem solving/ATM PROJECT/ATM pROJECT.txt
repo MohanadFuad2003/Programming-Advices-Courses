@@ -1,0 +1,318 @@
+#pragma once
+#include <iostream>
+#include <string>
+#include<thread>
+#include<iomanip>
+#include<fstream>
+#include <vector>
+#include <chrono>
+
+using namespace std;
+
+void ShowATMmainScreen();
+string FileName = "Clients.txt";
+
+struct sClient {
+	string AccountNumber;
+	string PinCode;
+	string Name;
+	string Phone;
+	double AccountBalance;
+};
+
+bool AskToDoSomthing(string msg = "") {
+	char ch = 'Y';
+	cout << msg << " ";
+	cin >> ch;
+	return (toupper(ch) == 'Y');
+}
+
+
+int ReadNumberToChooseNumber(short To, short From) {
+	int number = 0;
+	while (true) {
+		cin >> number;
+		if (cin.fail()) {
+			cout << "\nInvalid input! Please enter a valid number.";
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			this_thread::sleep_for(chrono::seconds(4));
+			cout << "\r" << string(60, ' ') << "\r" << flush;
+			continue;
+		}
+		if (number >= To && number <= From) {
+			return number;
+		}
+		cout << "\nIncorrect Number, Please enter a number between { " << To << " --> " << From << " } : ";
+		this_thread::sleep_for(chrono::seconds(4));
+		cout << "\r" << string(63, ' ') << "\r" << flush;
+	}
+}
+
+vector<string> SplitString(string S1, string Delim) {
+	vector<string> vString;
+	short pos = 0;
+	string sWord;
+	while ((pos = S1.find(Delim)) != std::string::npos) {
+		sWord = S1.substr(0, pos);
+		if (sWord != "") {
+			vString.push_back(sWord);
+		}
+		S1.erase(0, pos + Delim.length());
+	}
+	if (S1 != "") {
+		vString.push_back(S1);
+	}
+	return vString;
+}
+
+sClient CurrentClient;
+
+string ConvertRecordToLine(sClient Client, string Seperator = "#//#") {
+	string stClientRecord = "";
+	stClientRecord += Client.AccountNumber + Seperator;
+	stClientRecord += Client.PinCode + Seperator;
+	stClientRecord += Client.Name + Seperator;
+	stClientRecord += Client.Phone + Seperator;
+	stClientRecord += to_string(Client.AccountBalance);
+	return stClientRecord;
+}
+
+void GoBackToMainMeneuATM() {
+	cout << "\nPress Any Key To Back To Meneu Screen .... " << endl;
+	system("Pause>0");
+	ShowATMmainScreen();
+}
+
+
+sClient ConvertLinetoRecord(string Line, string Seperator = "#//#") {
+	sClient Client;
+	vector<string> vClientData;
+	vClientData = SplitString(Line, Seperator);
+	Client.AccountNumber = vClientData[0];
+	Client.PinCode = vClientData[1];
+	Client.Name = vClientData[2];
+	Client.Phone = vClientData[3];
+	Client.AccountBalance = stod(vClientData[4]);
+	return Client;
+}
+
+vector<sClient> LoadDataFromFile() {
+	fstream MyFile;
+	MyFile.open(FileName, ios::in | ios::app);
+	string line;
+	vector<sClient> store;
+	if (MyFile.is_open()) {
+		while (getline(MyFile, line)) {
+			store.push_back(ConvertLinetoRecord(line));
+		}
+	}
+	MyFile.close();
+	return store;
+}
+
+bool IsFindClinetByAccountNumber(string AccountNumber, string PinCode) {
+	vector<sClient> store = LoadDataFromFile();
+	for (sClient Cl1 : store) {
+		if ((Cl1.AccountNumber == AccountNumber) && (PinCode == Cl1.PinCode)) {
+			CurrentClient = Cl1;
+			return true;
+		}
+	}
+	return false;
+}
+
+void ReadAccountNumberAndPinCode(string& AccountNumber, string& PinCode) {
+	cout << "\nEnter Account Number : ";
+	getline(cin >> ws, AccountNumber);
+	cout << "\nEnter PinCode : ";
+	getline(cin >> ws, PinCode);
+}
+
+enum enATMMeneu { enQuickWithdraw = 1, enNormalWithdraw = 2, enDeposit = 3, enCheckBalance = 4, enLogut = 5 };
+
+
+void PrintYourBalanceInScreen() {
+	cout << "\nYour Balance Is : " << CurrentClient.AccountBalance << endl;
+}
+
+void  ShowYourBalanceToCheckIt() {
+	system("cls");
+	cout << "====================================";
+	cout << "\n\tCheck Balance Screen";
+	cout << "\n====================================\n";
+	PrintYourBalanceInScreen();
+}
+
+void UpdateClinetAfterTransactions() {
+	vector<sClient> store = LoadDataFromFile();
+	fstream File;
+	File.open(FileName, ios::out);
+	if (File.is_open()) {
+		for (sClient Cl1 : store) {
+			if (Cl1.AccountNumber == CurrentClient.AccountNumber) {
+				File << ConvertRecordToLine(CurrentClient) << endl;
+			}
+			else
+				File << ConvertRecordToLine(Cl1) << endl;
+		}
+	}
+	File.close();
+}
+
+void CheckIsBalanceIslessThanWithrdawAndForDepositAmount(double result) {
+	if (result < 0)
+		cout << "\nThe Amount Exceeds Your Balance , Back To Main Meneu And Choose Again Another Choice ..." << endl;
+	else {
+		if (AskToDoSomthing("\nAre You Sure Want To Do This Transaction [Y/N] ? ")) {
+			CurrentClient.AccountBalance = result;
+			cout << "\nThe Transaction Is Done Successfuly."; PrintYourBalanceInScreen();
+			UpdateClinetAfterTransactions();
+		}
+		else
+			cout << "\nYou press No , So The Transaction is Not Done..." << endl;
+	}
+}
+
+void ToDoquickWithDraw(int Choose) {
+	double Result = CurrentClient.AccountBalance;
+	switch (Choose) {
+	case 1:  Result -= 20;
+		break;
+	case 2: Result -= 50;
+		break;
+	case 3: Result -= 100;
+		break;
+	case 4: Result -= 200;
+		break;
+	case 5: Result -= 400;
+		break;
+	case 6: Result -= 600;
+		break;
+	case 7: Result -= 800;
+		break;
+	case 8: Result -= 1000;
+		break;
+	case 9: return;
+	}
+	CheckIsBalanceIslessThanWithrdawAndForDepositAmount(Result);
+}
+
+
+void ShowQiuckWithdrawScreenMeneu() {
+	system("cls");
+	cout << "======================================";
+	cout << "\n\tQUICK WITHDRAW SCREEN";
+	cout << "\n======================================\n";
+	cout << "\t[1] 20 \t\t[2] 50\n";
+	cout << "\t[3] 100 \t[4] 200\n";
+	cout << "\t[5] 400 \t[6] 600\n";
+	cout << "\t[7] 800 \t[8] 1000\n";
+	cout << "\t[9] Exit \n";
+	cout << "======================================\n";
+	PrintYourBalanceInScreen();
+	cout << "\nChoose What Do You Want From [1] to [9] ? ";
+	ToDoquickWithDraw((ReadNumberToChooseNumber(1, 9)));
+
+}
+
+void WithdrawNormalTransactionOptinToDo() {
+	int Amount = 0;
+	cout << "\nEnter an Amount Multiple of 5's ? ";
+	cin >> Amount;
+	while ((Amount % 5) != 0) {
+		cout << "\nEnter an Amount Multiple of 5's ? ";
+		cin >> Amount;
+	}
+	CheckIsBalanceIslessThanWithrdawAndForDepositAmount(CurrentClient.AccountBalance - Amount);
+}
+
+void ShowNormalWithdrawScreenMeneu() {
+	system("cls");
+	cout << "====================================";
+	cout << "\n\tNORMAL WITHDRAW MENEU SCREEN";
+	cout << "\n====================================\n";
+	WithdrawNormalTransactionOptinToDo();
+}
+
+int ReadPositiveNumber() {
+	int Amount = 0;
+	cout << "\nEnter Positive Amount : ";
+	cin >> Amount;
+	while (Amount <= 0) {
+		cout << "\n Press Positive Greater Than Zero : ";
+		cin >> Amount;
+	}
+
+	return Amount;
+}
+
+void ToDoDepositForClient() {
+	int Amount = ReadPositiveNumber();
+	CheckIsBalanceIslessThanWithrdawAndForDepositAmount(CurrentClient.AccountBalance + Amount);
+}
+
+void ShowDepositScreen() {
+	system("cls");
+	cout << "====================================";
+	cout << "\n\tDEPOSIT MENEU SCREEN";
+	cout << "\n====================================\n";
+	ToDoDepositForClient();
+
+}
+
+void ShowListOfMeneuFromATMOptions(enATMMeneu Choose) {
+	switch (Choose) {
+	case enQuickWithdraw:   ShowQiuckWithdrawScreenMeneu();   GoBackToMainMeneuATM();
+		break;
+	case enNormalWithdraw:  ShowNormalWithdrawScreenMeneu();       GoBackToMainMeneuATM();
+		break;
+	case enDeposit:    ShowDepositScreen();           GoBackToMainMeneuATM();
+		break;
+	case enCheckBalance: ShowYourBalanceToCheckIt(); GoBackToMainMeneuATM();
+		break;
+	case enLogut: system("cls");
+		break;
+	}
+}
+
+void ShowATMmainScreen() {
+	system("cls");
+	cout << "====================================";
+	cout << "\n\tATM MAIN MENEU SCREEN";
+	cout << "\n====================================\n";
+	cout << "\t[1] Quick Withdraw.\n";
+	cout << "\t[2] Normal Withdraw.\n";
+	cout << "\t[3] Deposit.\n";
+	cout << "\t[4] Check Balance.\n";
+	cout << "\t[5] Logout.\n";
+	cout << "===========================================\n";
+	cout << "\nChoose What Do You Want To Do From [1 to 5] ? ";
+	ShowListOfMeneuFromATMOptions(static_cast<enATMMeneu> (ReadNumberToChooseNumber(1, 6)));
+}
+
+void Login() {
+	string AccountNumber, PinCode;
+	bool Flag = false;
+	while (true) {
+		cout << "==================================";
+		cout << "\n\t LOGIN SCREEN";
+		cout << "\n==================================\n";
+
+		if (Flag) {
+			cout << "\nInvalid AccountNumber / PinCode." << endl;
+		}
+		ReadAccountNumberAndPinCode(AccountNumber, PinCode);
+		if (IsFindClinetByAccountNumber(AccountNumber, PinCode))
+			ShowATMmainScreen();
+		else {
+			Flag = true;
+			system("cls");
+		}
+	}
+
+}
+
+int main() {
+	Login();
+}

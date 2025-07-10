@@ -1,0 +1,88 @@
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+short ReadYear() {
+	short Year;
+	cout << "\nPlease enter a year ? ";
+	cin >> Year;
+	return Year;
+}
+
+short ReadMonth() {
+	short Month;
+	cout << "\nPlease enter a Month ? ";
+	cin >> Month;
+	return Month;
+}
+
+short ReadDay(string msg = "") {
+	short Day;
+	cout << msg;
+	cin >> Day;
+	return Day;
+}
+
+bool isLeapYear(short Year) {
+	return (Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0);
+}
+
+short NumberOfDaysInAMonth(short Month, short Year) {
+	if (Month < 1 || Month>12)
+		return 0;
+	int days[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+	return (Month == 2) ? (isLeapYear(Year) ? 29 : 28) :
+		days[Month - 1];
+}
+
+
+int NumberOfDayFromBigginingDayInYear(int Day, int Month, int Year) {
+	short NumberOfDay = 0;
+	for (int i = 1; i < Month; i++)
+	{
+		NumberOfDay += NumberOfDaysInAMonth(i, Year);
+	}
+
+	NumberOfDay += Day;
+	return NumberOfDay;
+}
+
+string KnowDateByNumberOfDays(short Year , int NumberOfDays) {
+	string res = "";
+	int month = 1;
+	short pos = NumberOfDaysInAMonth(month, Year);
+	while (NumberOfDays > pos) {
+		NumberOfDays -= NumberOfDaysInAMonth(month, Year);
+		month++;
+	}
+	res = to_string(NumberOfDays) + '/' + to_string(month) + '/' + to_string(Year);
+	return res;
+}
+string KnowDateByNumberOfDays(short Year, int NumberOfDays , int AddingDays) {
+	string res = "";
+	int month = 1;
+	NumberOfDays += AddingDays;
+	short pos = NumberOfDaysInAMonth(month, Year);
+	while (NumberOfDays > pos) {
+		NumberOfDays -= NumberOfDaysInAMonth(month, Year);
+		month++;
+		if (month > 12) {
+			Year++;
+			month = 1;
+		}
+	}
+	res = to_string(NumberOfDays) + '/' + to_string(month) + '/' + to_string(Year);
+	return res;
+}
+
+
+
+int main() {
+	short Year = ReadYear();
+	short Month = ReadMonth();
+	short Day = ReadDay("\nPlease Enter Day : ");
+	short AddingDay = ReadDay("\nHow Many Days Needs To Adding it : ");
+	cout <<  "\nDate after Adding ["  << AddingDay << "] is : " << KnowDateByNumberOfDays(Year, NumberOfDayFromBigginingDayInYear(Day, Month, Year ), AddingDay);
+
+}

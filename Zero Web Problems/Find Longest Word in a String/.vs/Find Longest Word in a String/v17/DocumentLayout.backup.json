@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mohan\\source\\repos\\Find Longest Word in a String\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{533D2999-EE52-49AE-81C3-F8EE2511CFC0}|Find Longest Word in a String\\Find Longest Word in a String.vcxproj|C:\\Users\\mohan\\source\\repos\\Find Longest Word in a String\\Find Longest Word in a String\\Find Longest Word in a String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{533D2999-EE52-49AE-81C3-F8EE2511CFC0}|Find Longest Word in a String\\Find Longest Word in a String.vcxproj|solutionrelative:Find Longest Word in a String\\Find Longest Word in a String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Find Longest Word in a String.cpp",
+              "DocumentMoniker": "C:\\Users\\mohan\\source\\repos\\Find Longest Word in a String\\Find Longest Word in a String\\Find Longest Word in a String.cpp",
+              "RelativeDocumentMoniker": "Find Longest Word in a String\\Find Longest Word in a String.cpp",
+              "ToolTip": "C:\\Users\\mohan\\source\\repos\\Find Longest Word in a String\\Find Longest Word in a String\\Find Longest Word in a String.cpp*",
+              "RelativeToolTip": "Find Longest Word in a String\\Find Longest Word in a String.cpp*",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCgAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-03T16:46:47.655Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

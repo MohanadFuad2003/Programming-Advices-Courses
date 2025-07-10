@@ -1,0 +1,63 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+
+void PrintMatrix(int arr[3][3], short Rows, short Cols) {
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << "     " << arr[i][j] << "     ";
+			
+		}
+		cout << "\n";
+	}
+}
+
+bool IsNumberZero(int Number ) {
+		if (Number == 0)
+			return true;
+	return false;
+}
+
+bool IsNumbersEqual(int Number1 , int Number2) {
+	
+	return Number1 == Number2;
+
+}
+
+bool IsMatrixIdentity(int Matrix[][3] , int Rows , int Cols) {
+	int NumberSC = Matrix[0][0];
+	for (int i = 0; i < Rows; i++) {
+		for (int j = 0; j < Cols; j++) {
+			if (i == j)
+			{
+				if (!(IsNumbersEqual(Matrix[i][j] , NumberSC)))
+					return false;
+			}
+			else {
+				if (!(IsNumberZero(Matrix[i][j])))
+					return false;
+			}
+		}
+	}
+	return true;
+}
+
+int main()
+{
+	srand((unsigned)time(NULL));
+	int Matrix[3][3] = { {9, 0 , 0} , {0 , 9 , 0} , {0 , 0 , 9} };
+	
+	cout << "\nMatrix :\n\n";
+	PrintMatrix(Matrix, 3, 3);
+
+	if (IsMatrixIdentity(Matrix, 3, 3)) {
+		cout << "\nMatrix Is Scalar :)" << endl;
+	}
+	else
+		cout << "\nMatrix Is Not Scalar ): " << endl;
+
+}

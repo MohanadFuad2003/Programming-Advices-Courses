@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mohan\\source\\repos\\Remove Char From String\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{246097A2-8955-4588-9BC8-7E0D06C69C13}|Remove Char From String\\Remove Char From String.vcxproj|C:\\Users\\mohan\\source\\repos\\Remove Char From String\\Remove Char From String\\Remove Char From String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{246097A2-8955-4588-9BC8-7E0D06C69C13}|Remove Char From String\\Remove Char From String.vcxproj|solutionrelative:Remove Char From String\\Remove Char From String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Remove Char From String.cpp",
+              "DocumentMoniker": "C:\\Users\\mohan\\source\\repos\\Remove Char From String\\Remove Char From String\\Remove Char From String.cpp",
+              "RelativeDocumentMoniker": "Remove Char From String\\Remove Char From String.cpp",
+              "ToolTip": "C:\\Users\\mohan\\source\\repos\\Remove Char From String\\Remove Char From String\\Remove Char From String.cpp",
+              "RelativeToolTip": "Remove Char From String\\Remove Char From String.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-03T17:40:16.802Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

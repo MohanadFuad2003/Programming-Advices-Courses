@@ -1,0 +1,36 @@
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+string ReadString() {
+	string S1;
+	cout << "\nPlease Enter Your String? ";
+	getline(cin, S1);
+	return S1;
+}
+
+void PrintEachWordInOneLine(string str) {  
+	bool flag = false;
+	string Word = "";
+	for (int i = 0; i < str.size(); i++) {
+		if (str[i] != ' ') {
+			Word += str[i];
+			flag = true;
+		}
+
+		if (( str[i] == ' ') && flag) {
+			cout << "\n" << Word << endl;
+			Word = "";
+			flag = false;
+		}
+	}
+
+	if (Word != "")
+		cout << "\n" << Word << endl;
+}
+
+int main() {
+	string S1 = ReadString();
+	PrintEachWordInOneLine(S1);
+}

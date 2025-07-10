@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\Problem25-5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7F1936A6-9F66-4AEE-B7AC-91BA84EEDDD0}|Problem25-5.vcxproj|C:\\Users\\User\\source\\repos\\Problem25-5\\Problem25-5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F1936A6-9F66-4AEE-B7AC-91BA84EEDDD0}|Problem25-5.vcxproj|solutionrelative:Problem25-5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Problem25-5.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Problem25-5\\Problem25-5.cpp",
+              "RelativeDocumentMoniker": "Problem25-5.cpp",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Problem25-5\\Problem25-5.cpp",
+              "RelativeToolTip": "Problem25-5.cpp",
+              "ViewState": "AQIAABcAAAAAAAAAAAAYwD0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-07T19:00:49.979Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

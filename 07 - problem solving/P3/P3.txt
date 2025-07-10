@@ -1,0 +1,69 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int RandomNumber(int From, int To) {
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void FillMatrixWithRandomNumbers(int arr[3][3], short Rows, short
+	Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			arr[i][j] = RandomNumber(1, 20);
+		}
+	}
+}
+
+void PrintSumationForRows(int Sum, int Count) {
+	cout << "\nRows " << Count + 1 << "Sumation is : " << Sum;
+}
+
+int SumOfRowsMatrix(int arr[3][3], short Rows, short Cols) {
+	int sum = 0;
+	for (int j = 0; j < Cols; j++)
+		sum += arr[Rows][j];
+	return sum;
+}
+
+void PrintOneDArray(int arr[] , int Rows) {
+	for (int i = 0; i < Rows; i++) {
+		cout << "\nCols " << i + 1 << " Sumation is : " << arr[i] << endl;
+	}
+}
+
+void StoreSumationForRowsOnOneDarrayAndPrintIt(int arr[3][3], int Rows, int Cols) {
+	int arrOneD[3];
+	for (int i = 0; i < Rows; i++) {
+		arrOneD[i] = SumOfRowsMatrix(arr, i, Cols);
+	}
+
+	PrintOneDArray(arrOneD , Rows);
+	
+}
+
+
+void PrintMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << "   " << setw(3) << arr[i][j] << " ";
+		}
+		cout << "\n";
+	}
+}
+
+int main() {
+	srand((unsigned)time(NULL));
+	int arr[3][3];
+	FillMatrixWithRandomNumbers(arr, 3, 3);
+	cout << "Matrix 3x3 Numbers is : " << endl;
+	PrintMatrix(arr, 3, 3); cout << endl;
+	StoreSumationForRowsOnOneDarrayAndPrintIt(arr, 3, 3);
+}

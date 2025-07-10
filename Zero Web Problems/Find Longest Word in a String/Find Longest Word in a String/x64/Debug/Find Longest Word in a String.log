@@ -1,0 +1,4 @@
+﻿  Find Longest Word in a String.cpp
+C:\Users\mohan\source\repos\Find Longest Word in a String\Find Longest Word in a String\Find Longest Word in a String.cpp(24,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\mohan\source\repos\Find Longest Word in a String\Find Longest Word in a String\Find Longest Word in a String.cpp(27,51): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Find Longest Word in a String.vcxproj -> C:\Users\mohan\source\repos\Find Longest Word in a String\x64\Debug\Find Longest Word in a String.exe

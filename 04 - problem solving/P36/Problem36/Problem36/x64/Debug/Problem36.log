@@ -1,0 +1,5 @@
+﻿  Problem36.cpp
+C:\Users\User\source\repos\Problem36\Problem36.cpp(32,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\User\source\repos\Problem36\Problem36.cpp(41,28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\User\source\repos\Problem36\Problem36.cpp(44,12): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+  Problem36.vcxproj -> C:\Users\User\source\repos\Problem36\x64\Debug\Problem36.exe

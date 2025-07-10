@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+string ReadString() {
+    string str;
+    cout << "Enter sentence: ";
+    getline(cin, str);
+    return str;
+}
+
+vector<char> StoreFirstLetterInVector(const string& str) {
+    vector<char> store;
+    bool flag = true;
+
+    for (char ch : str) {
+        if (!isspace(ch)) {
+            if (flag) {
+                store.push_back(ch);
+                flag = false;
+            }
+        } else {
+            flag = true;
+        }
+    }
+    return store;
+}
+
+void PrintFirstLetters(const vector<char>& store) {
+    for (char ch : store) {
+        cout << ch << "  ";
+    }
+    cout << endl;
+}
+
+int main() {
+    string input = ReadString();
+    vector<char> store = StoreFirstLetterInVector(input);
+    PrintFirstLetters(store);
+}

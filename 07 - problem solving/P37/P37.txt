@@ -1,0 +1,44 @@
+#include <string>
+#include<vector>
+#include <iostream>
+using namespace std;
+
+string ReadString() {
+	string S1;
+	cout << "\nPlease Enter Your String? ";
+	getline(cin, S1);
+	return S1;
+}
+
+vector<string> StoreEachWordInStringInsideVector(string str) { //  Mohammad  Ali  Tareq  
+	bool flag = false;
+	string Word = "";
+	vector<string> Store;
+	for (int i = 0; i < str.size(); i++) {
+		if (str[i] != ' ') {
+			Word += str[i];
+			flag = true;
+		}
+
+		if (( str[i] == ' ') && flag) {
+			Store.push_back(Word);
+			Word = "";
+			flag = false;
+		}
+	}
+	if (Word != "") {
+		Store.push_back(Word);
+	}
+	return Store;
+}
+
+int main() {
+	string S1 = ReadString();
+	vector<string> Store = StoreEachWordInStringInsideVector(S1);
+
+	cout << "Size = " << Store.size() << endl;
+	cout << endl;
+	for (int i = 0; i < Store.size(); i++) {
+		cout << Store[i] << endl;
+	}
+}

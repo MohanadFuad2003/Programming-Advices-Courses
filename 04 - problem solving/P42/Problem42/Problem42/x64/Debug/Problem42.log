@@ -1,0 +1,5 @@
+﻿  Problem42.cpp
+C:\Users\User\source\repos\Problem42\Problem42.cpp(50,38): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\User\source\repos\Problem42\Problem42.cpp(53,39): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\User\source\repos\Problem42\Problem42.cpp(56,41): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Problem42.vcxproj -> C:\Users\User\source\repos\Problem42\x64\Debug\Problem42.exe

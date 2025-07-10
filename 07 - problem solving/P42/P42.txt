@@ -1,0 +1,50 @@
+#include <string>
+#include <iostream>
+#include <vector>
+using namespace std;
+
+string ReadString(string message = "Please Enter Your Original String?\n") {
+	string S1;
+	cout << message;
+	getline(cin, S1);
+	return S1;
+}
+vector<string> SplitString(string S1, string Delim) {
+	vector<string> vString;
+	short pos = 0;
+	string sWord; 
+
+	while ((pos = S1.find(Delim)) != std::string::npos)
+	{
+		sWord = S1.substr(0, pos);
+		if (sWord != "")
+		{
+			vString.push_back(sWord);
+		}
+		S1.erase(0, pos + Delim.length()); 
+		
+	}
+	if (S1 != "")
+	{
+		vString.push_back(S1);
+	}
+	return vString;
+}
+
+string ReplaceUsingBuiltInFunction(string Original, string WhatNeedToReplace, string ReplaceTo) {
+	int position = 0;
+	while ((position = Original.find(WhatNeedToReplace)) != Original.npos) {
+     Original = Original.replace(position, WhatNeedToReplace.length(), ReplaceTo);
+                                                                                                                                                   // replace bulit in --> position : the index where locate it ,  
+	                                                                                                                                //  whatNeedToReplace.length --> length of string need to replace it
+	}
+
+	return Original;
+}
+
+int main() {
+	string S1 = ReadString();
+	string WhatNeedToReplace = ReadString("\nWhat String Need To Replace : ");
+	string ReplaceTo = ReadString("\nEnter The string Need To Put It : ");
+	cout << "\n\n After Replace : " << ReplaceUsingBuiltInFunction(S1, WhatNeedToReplace, ReplaceTo);
+}

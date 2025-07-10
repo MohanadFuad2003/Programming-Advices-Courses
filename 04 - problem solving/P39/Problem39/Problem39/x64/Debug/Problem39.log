@@ -1,0 +1,4 @@
+﻿  Problem39.cpp
+C:\Users\User\source\repos\Problem39\Problem39.cpp(32,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\User\source\repos\Problem39\Problem39.cpp(33,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Problem39.vcxproj -> C:\Users\User\source\repos\Problem39\x64\Debug\Problem39.exe

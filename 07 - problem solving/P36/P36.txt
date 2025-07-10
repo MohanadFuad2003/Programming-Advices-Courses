@@ -1,0 +1,40 @@
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+string ReadString() {
+	string S1;
+	cout << "\nPlease Enter Your String? ";
+	getline(cin, S1);
+	return S1;
+}
+
+int CountEachWordInString(string str) { //  Mohammad  Ali  Tareq  
+	bool flag = false;
+	string Word = "";
+	int count = 0;
+	for (int i = 0; i < str.size(); i++) {
+		if (str[i] != ' ') {
+			Word += str[i];
+			flag = true;
+		}
+
+		if (( str[i] == ' ') && flag) {
+			Word = "";
+			count++;
+			flag = false;
+		}
+	}
+
+	if (Word != "") {
+		cout << "\n" << Word << endl;
+		return ++count;
+	}
+	return count;
+}
+
+int main() {
+	string S1 = ReadString();
+	cout <<  "\nCount Word in String is : " << CountEachWordInString(S1);
+}

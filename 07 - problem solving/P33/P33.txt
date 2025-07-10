@@ -1,0 +1,34 @@
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+
+string ReadString() {
+	string letter;
+	cout << "\nEnter A String ? ";
+	getline(cin, letter);
+	return letter;
+}
+
+bool IsCharVowel(char ch) {
+	const string S1 = "aeiou";
+	
+	return S1.find(tolower(ch)) != S1.npos;
+}
+
+int CountVowels(string str) {
+	int count = 0;
+	for (int i = 0; i < str.size(); i++) {
+		if (IsCharVowel(str[i]))
+			count++;
+	}
+	return count;
+}
+
+int main() {
+	
+	string str = ReadString();
+	cout << "Number Of Vowels Is : " << CountVowels(str);
+	
+}

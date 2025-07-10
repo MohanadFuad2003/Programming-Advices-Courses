@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+void SwapNumbersToRight(int & SecondNumber, int & Number, int & PrintNumber) {
+	PrintNumber = SecondNumber + Number;
+	SecondNumber = Number;
+	Number = PrintNumber;
+}
+
+void PrintFibonacciSerice(int NumberOfSize) {
+	int Number = 1; 
+	cout << Number << " " << Number << " ";
+	int SecondNumber = 1;
+	int PrintNumber = 0;
+	for (int i = 2; i < NumberOfSize; i++) {
+		SwapNumbersToRight(SecondNumber, Number, PrintNumber);
+		cout << PrintNumber << " ";
+	}
+}
+
+int main() {
+	PrintFibonacciSerice(20);
+	
+}

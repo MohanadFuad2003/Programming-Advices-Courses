@@ -1,0 +1,59 @@
+#include <string>
+#include<vector>
+#include <iostream>
+using namespace std;
+
+string ReadString() {
+	string S1 = "";
+	cout << "Enter Statement String : ";
+	getline(cin, S1);
+	return S1;
+}
+
+string TrimLeft(string str) {
+	int count = 0;
+	while (str[count] ==' ') { //  AHmad
+		count++;
+	}
+	str.erase(str.begin(), str.begin() + count) ;
+	 return str;
+}
+
+string TrimRight(string str) {
+	for (int i = str.size() - 1; i >= 0; i--) {
+		if (str[i] ==' ')
+			str.pop_back();
+		else
+			break;
+	}
+	return str;
+}
+
+string TrimAll(string str) {
+	return TrimLeft(TrimRight(str));
+}
+
+int main() {
+
+	string str = ReadString();
+	cout << "\n____________________________________________________";
+	cout << "\nBefore Trims = " << str << endl  << "Size = " << str.size() << endl;
+	str = TrimLeft(str);
+	cout << "\n____________________________________________________";
+	cout << "\n\n After TrimLift = " << str << endl << "Size TF = " << str.size();
+
+	str = TrimRight(str);
+
+	cout << "\n____________________________________________________";
+	cout << "\n\n Trim Right = " << str << endl;
+
+
+	cout << "\n\n Size Trim  RT = " << str.size();
+
+	str = TrimAll(str);
+	cout << "\n____________________________________________________";
+	cout << "\n\nTrim All = " << TrimAll(str) << endl;
+
+	cout << "\n\n Size Trim  All = " << str.size();
+	cout << "\n____________________________________________________";
+}

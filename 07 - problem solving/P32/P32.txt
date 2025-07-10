@@ -1,0 +1,25 @@
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+char ReadChar() {
+                  char ch;
+                  cout << "\nEnter A Character ? ";
+	cin >> ch;
+	return ch;
+}
+
+bool IsCharVowel(char ch) {
+	const string S1 = "aeiou";
+	
+	return S1.find(tolower(ch)) != S1.npos;
+}
+
+int main() {
+	char ch = ReadChar();
+	if (IsCharVowel(ch)) 
+		cout << "Yes , Letter '" << ch << "' Is Vowel" << endl;
+	else
+		cout << "No ,  Letter '" << ch << "' Is Not Vowel" << endl;
+}
