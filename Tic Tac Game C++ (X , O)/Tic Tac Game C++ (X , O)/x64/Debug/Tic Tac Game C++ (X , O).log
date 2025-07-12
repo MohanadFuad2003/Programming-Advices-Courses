@@ -1,0 +1,5 @@
+﻿  Tic Tac Game C++ (X , O).cpp
+C:\Users\mohan\source\repos\Tic Tac Game C++ (X , O)\Tic Tac Game C++ (X , O)\Tic Tac Game C++ (X , O).cpp(143,21): warning C4566: character represented by universal-character-name '\U0001F389' cannot be represented in the current code page (1252)
+C:\Users\mohan\source\repos\Tic Tac Game C++ (X , O)\Tic Tac Game C++ (X , O)\Tic Tac Game C++ (X , O).cpp(160,21): warning C4566: character represented by universal-character-name '\U0001F61E' cannot be represented in the current code page (1252)
+C:\Users\mohan\source\repos\Tic Tac Game C++ (X , O)\Tic Tac Game C++ (X , O)\Tic Tac Game C++ (X , O).cpp(192,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Tic Tac Game C++ (X , O).vcxproj -> C:\Users\mohan\source\repos\Tic Tac Game C++ (X , O)\x64\Debug\Tic Tac Game C++ (X , O).exe
