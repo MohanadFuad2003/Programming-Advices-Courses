@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mohan\\source\\repos\\Tic Tac (X , 0) Game C\u002B\u002B\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F6282-0788-417D-BB41-31AFDC8211EC}|Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B.vcxproj|C:\\Users\\mohan\\source\\repos\\Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7D1F6282-0788-417D-BB41-31AFDC8211EC}|Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B.vcxproj|solutionrelative:Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tic Tac (X , 0) Game C\u002B\u002B.cpp",
+              "DocumentMoniker": "C:\\Users\\mohan\\source\\repos\\Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B.cpp",
+              "RelativeDocumentMoniker": "Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B.cpp",
+              "ToolTip": "C:\\Users\\mohan\\source\\repos\\Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B.cpp",
+              "RelativeToolTip": "Tic Tac (X , 0) Game C\u002B\u002B\\Tic Tac (X , 0) Game C\u002B\u002B.cpp",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAiwM4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-12T22:14:40.412Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
