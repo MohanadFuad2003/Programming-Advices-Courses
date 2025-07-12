@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mohan\\source\\repos\\Tic-Tac C\u002B\u002B Console App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2A5491-5EA3-4C4D-BDAA-46F7179D41D2}|Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App.vcxproj|C:\\Users\\mohan\\source\\repos\\Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EA2A5491-5EA3-4C4D-BDAA-46F7179D41D2}|Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App.vcxproj|solutionrelative:Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tic-Tac C\u002B\u002B Console App.cpp",
+              "DocumentMoniker": "C:\\Users\\mohan\\source\\repos\\Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App.cpp",
+              "RelativeDocumentMoniker": "Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App.cpp",
+              "ToolTip": "C:\\Users\\mohan\\source\\repos\\Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App.cpp",
+              "RelativeToolTip": "Tic-Tac C\u002B\u002B Console App\\Tic-Tac C\u002B\u002B Console App.cpp",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAAAIkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-12T17:20:36.551Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
