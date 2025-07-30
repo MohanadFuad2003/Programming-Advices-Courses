@@ -1,0 +1,7 @@
+C:\Users\mohan\source\repos\Properties Get and Set\bin\Debug\Properties Get and Set.exe.config
+C:\Users\mohan\source\repos\Properties Get and Set\bin\Debug\Properties Get and Set.exe
+C:\Users\mohan\source\repos\Properties Get and Set\bin\Debug\Properties Get and Set.pdb
+C:\Users\mohan\source\repos\Properties Get and Set\obj\Debug\Properties Get and Set.csproj.AssemblyReference.cache
+C:\Users\mohan\source\repos\Properties Get and Set\obj\Debug\Properties Get and Set.csproj.CoreCompileInputs.cache
+C:\Users\mohan\source\repos\Properties Get and Set\obj\Debug\Properties Get and Set.exe
+C:\Users\mohan\source\repos\Properties Get and Set\obj\Debug\Properties Get and Set.pdb
