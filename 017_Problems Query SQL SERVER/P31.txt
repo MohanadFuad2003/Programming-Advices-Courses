@@ -1,0 +1,16 @@
+
+-- Get all Vehicle_Display_Name, year and add extra column to calculate the age of the car then sort the results by age desc.
+
+
+-- Note that YEAR in capital Letters is built in function in SQL Server that will give your the year of the given date :-) , 
+-- and the year in small letters is the column name
+
+
+
+
+
+
+
+Select VehicleDetails.Vehicle_Display_Name, Year, Age= YEAR(GetDate()) - VehicleDetails.year
+from VehicleDetails
+Order by Age Desc

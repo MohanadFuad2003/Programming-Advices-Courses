@@ -1,0 +1,16 @@
+CREATE VIEW MasterView AS(
+
+SELECT dbo.VehicleDetails.*, dbo.Makes.Make, dbo.MakeModels.ModelName, dbo.FuelTypes.FuelTypeName, dbo.DriveTypes.DriveTypeName, dbo.Bodies.BodyName, dbo.SubModels.SubModelName
+FROM     dbo.FuelTypes INNER JOIN
+                  dbo.Bodies INNER JOIN
+                  dbo.Makes INNER JOIN
+                  dbo.MakeModels ON dbo.Makes.MakeID = dbo.MakeModels.MakeID INNER JOIN
+                  dbo.SubModels ON dbo.MakeModels.ModelID = dbo.SubModels.ModelID INNER JOIN
+                  dbo.VehicleDetails ON dbo.SubModels.SubModelID = dbo.VehicleDetails.SubModelID ON dbo.Bodies.BodyID = dbo.VehicleDetails.BodyID INNER JOIN
+                  dbo.DriveTypes ON dbo.VehicleDetails.DriveTypeID = dbo.DriveTypes.DriveTypeID ON dbo.FuelTypes.FuelTypeID = dbo.VehicleDetails.FuelTypeID
+)
+
+
+select * from MasterView
+
+ 
