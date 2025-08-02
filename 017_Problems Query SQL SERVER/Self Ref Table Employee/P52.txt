@@ -1,0 +1,4 @@
+
+
+select Employees.* , Managers.Name as ManagersName  from Employees 
+left join Employees as Managers on Employees.ManagerID = Managers.EmployeeID
