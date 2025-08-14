@@ -25,6 +25,8 @@ namespace Tic_Tac_Toe
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ResetButton.Enabled = false ;
+
             this.Paint += Form1_Paint;
 
             xImg = Properties.Resources.X;
@@ -92,6 +94,7 @@ namespace Tic_Tac_Toe
 
         private void Winner(string playerName)
         {
+            ResetButton.Enabled = true;
             MessageBox.Show(playerName + " wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
             NamePlayerWinner.Text = playerName;
             gameOver = true;
@@ -133,6 +136,7 @@ namespace Tic_Tac_Toe
 
             if (counter == 9)
             {
+                ResetButton.Enabled = true;
                 MessageBox.Show("Tie!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 NamePlayerWinner.Text = "Tie!";
                 gameOver = true;
@@ -169,7 +173,10 @@ namespace Tic_Tac_Toe
 
         private void PictureBox_Click(PictureBox picture)
         {
-            if (gameOver) return;
+         
+            if (gameOver) 
+                return;
+
 
             if (!CheckIsTagInHashSet(picture))
             {
@@ -211,6 +218,7 @@ namespace Tic_Tac_Toe
 
         private void ResetGame()
         {
+            ResetButton.Enabled = true;    
             counter = 0;
             counterX = 0;
             counterO = 0;
@@ -224,6 +232,7 @@ namespace Tic_Tac_Toe
                 pic.Image = emptyImg;
                 pic.BackColor = Color.FromArgb(240, 240, 240);
             }
+            ResetButton.Enabled = false;
         }
 
         private void ResetButton_Click(object sender, EventArgs e)
