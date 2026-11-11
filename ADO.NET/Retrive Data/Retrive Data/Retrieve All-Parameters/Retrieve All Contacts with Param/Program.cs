@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 public class Program
 {
-    static string connectionString = "Server=.;Database=ContactsDB;User Id=sa;Password=123456;"; // Replace with your actual connection string
+    static string connectionString = "Server=.;Database=ContactsDB;Trusted_Connection=True;"; // Replace with your actual connection string
 
 
     

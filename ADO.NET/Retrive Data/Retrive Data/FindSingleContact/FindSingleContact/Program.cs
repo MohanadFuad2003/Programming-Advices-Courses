@@ -6,7 +6,7 @@ using System.Security.Policy;
 
 public class Program
 {
-    static string connectionString = "Server=.;Database=contactsDB;User Id=sa;Password=123456;"; // Replace with your actual connection string
+    static string connectionString = "Server=.;Database=contactsDB;Trusted_Connection=True;"; // Replace with your actual connection string
 
     static bool FindContactByID(int ContactID, ref stContact ContactInfo)
     {
